@@ -15,7 +15,7 @@ class UpdateClientProfileForm(forms.Form):
 
     def __init__(self, instance, *args, **kwargs):
         super(UpdateClientProfileForm, self).__init__(*args, **kwargs)
-        
+
 
 class BranchForm(forms.ModelForm):
 
@@ -43,7 +43,7 @@ class BranchForm(forms.ModelForm):
         try:
             if int(phone_number):
                 check_phone = str(phone_number)
-                if not phone_number or not(len(check_phone) == 10):
+                if not phone_number or not(len(check_phone) == 9):
                     raise forms.ValidationError(
                         'Please enter a valid 10 digit phone number')
                 return phone_number

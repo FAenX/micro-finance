@@ -3,6 +3,7 @@ from django.conf import settings
 from django.core.exceptions import ObjectDoesNotExist
 from django.contrib.auth.models import BaseUserManager, AbstractBaseUser, Permission
 from django.template.defaultfilters import slugify
+from datetime import datetime
 
 
 GENDER_TYPES = (
@@ -11,9 +12,9 @@ GENDER_TYPES = (
 )
 
 USER_ROLES = (
-    ('BranchManager', 'BranchManager'),
-    ('LoanOfficer', 'LoanOfficer'),
-    ('Cashier', 'Cashier')
+    ('Chairmanr', 'Chairman'),
+    ('Secretary', 'Secretary'),
+    ('Treasure', 'Treasurer')
 )
 
 CLIENT_ROLES = (

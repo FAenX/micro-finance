@@ -56,12 +56,9 @@ AUTH_USER_MODEL = 'micro_admin.User'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'mfi',
-        'USER': 'postgres',
-        'PASSWORD': 'root',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+
     }
 }
 
@@ -173,3 +170,4 @@ CELERYBEAT_SCHEDULE = {
     #     'args': (25, 25)
     # },
 }
+STATIC_ROOT = 'home/eirowua/micro-finance/static'
